@@ -54,7 +54,6 @@ public class Lesson3App {
         public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
             int sum = initValue + delta;
         if (increment == true || false) {
-
             System.out.println(sum);
         } else {
             int result = initValue - delta;

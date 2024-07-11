@@ -1,22 +1,38 @@
 package ru.otus.java.basic.lesson3;
 
+import java.util.Scanner;
+
 public class Lesson3App {
     public static void main(String[] args) {
-        greetings();
-        checkSing(50,20,-15);
-        checkSing(-30,10,20);
-        checkSing(15,5,-40);
-        selectColor(5);
-        selectColor(10);
-        selectColor(15);
-        selectColor(25);
-        compareNumbers(20,10);
-        compareNumbers(15,20);
-        compareNumbers(20,20);
-        addOrSubtractAndPrint(10,5,true);
-        addOrSubtractAndPrint(30,50,false);
-    }
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите число");
+        int task = scanner.nextInt();
+        System.out.println("Вы ввели число: " + task);
+        if (task == 1){
+           greetings();
+        } else if (task == 2) {
+            int a = (int)(Math.random() *10);
+            int b = (int)(Math.random() *10);
+            int c = (int)(Math.random() *10);
+            checkSing(a,b,c);
+        } else if(task == 3) {
+            int a = (int)(Math.random() *100);
+            selectColor(a);
+        } else if(task ==4) {
+            int a = (int)(Math.random() *100);
+            int b = (int)(Math.random() *10);
+            compareNumbers(a,b);
+        } else if(task == 5) {
+            int a = (int)(Math.random() *100);
+            int b = (int)(Math.random() *100);
+            int c = (int)(Math.random() *10);
+            addOrSubtractAndPrint(a,b,c>5);
+        }else {
+            System.out.println("Выбрана неизвестная операция");
+        }
+        System.out.println("Конец программы");
 
+    }
     public static void greetings() {
         System.out.println("Hello");
         System.out.println("World");

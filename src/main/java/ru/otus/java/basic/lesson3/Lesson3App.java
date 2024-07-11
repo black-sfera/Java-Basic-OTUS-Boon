@@ -10,6 +10,9 @@ public class Lesson3App {
         selectColor(10);
         selectColor(15);
         selectColor(25);
+        compareNumbers(20,10);
+        compareNumbers(15,20);
+        compareNumbers(20,20);
     }
 
     public static void greetings() {
@@ -36,4 +39,14 @@ public class Lesson3App {
             System.out.println("Зеленый");
         }
     }
+    public static void compareNumbers(int a, int b){
+        if (a >= b){
+            System.out.println("a >= b");
+
+    } else {
+
+        System.out.println("a < b");
+
+            }
+        }
 }

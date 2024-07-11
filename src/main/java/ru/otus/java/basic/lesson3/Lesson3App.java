@@ -13,6 +13,8 @@ public class Lesson3App {
         compareNumbers(20,10);
         compareNumbers(15,20);
         compareNumbers(20,20);
+        addOrSubtractAndPrint(10,5,true);
+        addOrSubtractAndPrint(30,50,false);
     }
 
     public static void greetings() {
@@ -48,5 +50,15 @@ public class Lesson3App {
         System.out.println("a < b");
 
             }
+        }
+        public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+            int sum = initValue + delta;
+        if (increment == true || false) {
+
+            System.out.println(sum);
+        } else {
+            int result = initValue - delta;
+            System.out.println(result);
+        }
         }
 }

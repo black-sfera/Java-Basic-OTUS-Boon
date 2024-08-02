@@ -51,9 +51,9 @@ public class Lesson3App {
     public static void selectColor(int data){
         if (data <= 10){
             System.out.println("Красный");
-        } else if (data >= 10 && data <= 20) {
+        } else if (data <= 20) {
             System.out.println("Желтый");
-        } else if (data > 20){
+        } else {
             System.out.println("Зеленый");
         }
     }
@@ -68,8 +68,8 @@ public class Lesson3App {
             }
         }
         public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+        if (increment) {
             int sum = initValue + delta;
-        if (increment == true || false) {
             System.out.println(sum);
         } else {
             int result = initValue - delta;

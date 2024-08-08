@@ -16,6 +16,9 @@ public class Lesson5App {
         pointSearch(arr);
         pointSearch(arr5);
         pointSearch(result);
+
+        int[] add = {1,2,3,4,5,6,7};
+        ascendingMethod();
     }
 
     public static int[] sumArrays(int[]... arrays) {
@@ -69,5 +72,21 @@ public class Lesson5App {
 
     }
 
+    public static void ascendingMethod() {
+        int[] add = {1, 2, 3, 4, 5, 6, 7};
+        boolean allElements = true;
+        for (int i = 0; i < add.length - 1; i++) {
+            int that = add[i];
+            int next = add[i + 1];
+            if (that > next) {
+                allElements = false;
+            }
+        }
+        if (allElements) {
+            System.out.println("Все элементы масива идут в порядке возрастания");
+        } else {
+            System.out.println("Все элементы масива не идут в порядке возрастания");
+        }
+    }
 
 }

@@ -17,8 +17,15 @@ public class Lesson5App {
         pointSearch(arr5);
         pointSearch(result);
 
-        int[] add = {1,2,3,4,5,6,7};
+        int[] add = {1, 2, 3, 4, 5, 6, 7};
         ascendingMethod();
+
+        int[] agg = {1, 2, 3, 4, 5};
+
+
+        int[] result1 = turningOver(agg);
+        System.out.println(Arrays.toString(agg));
+        System.out.println(Arrays.toString(result1));
     }
 
     public static int[] sumArrays(int[]... arrays) {
@@ -87,6 +94,19 @@ public class Lesson5App {
         } else {
             System.out.println("Все элементы масива не идут в порядке возрастания");
         }
+    }
+
+
+    public static int[] turningOver(int[] agg) {
+
+        int[] agg1 = new int[agg.length];
+        for (int i = 0; i < agg.length; i++) {
+            agg1[agg.length - 1 - i] = agg[i];
+            System.out.println("Значение слева " + agg1[agg.length - 1 - i] + " индекс " + (agg.length - 1 - i));
+            System.out.println("Значение справа " + agg[i] + " индекс " + (i));
+
+        }
+        return agg1;
     }
 
 }

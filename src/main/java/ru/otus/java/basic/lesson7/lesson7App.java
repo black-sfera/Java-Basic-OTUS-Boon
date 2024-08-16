@@ -10,7 +10,12 @@ public class lesson7App {
 
 
         drawing(4);
+        int[][] arr2 = new int[5][5];
+        fill2DArray(arr2, 5);
+        print2DArray(arr2);
 
+        diagonalZeros(arr2);
+        print2DArray(arr2);
 
     }
 
@@ -35,8 +40,35 @@ public class lesson7App {
             System.out.println();
         }
         System.out.println();
-
     }
-    
 
+    public static void fill2DArray(int[][] array, int value) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = value;
+            }
+        }
+    }
+
+    public static void print2DArray(int[][] input) {
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input[i].length; j++) {
+                System.out.print(input[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+    public static void diagonalZeros(int[][] input) {
+        for (int i = 0; i < input.length; i++){
+            for (int j = 0; j < input[i].length; j++){
+                if (i == j) {
+                    input[i][j] = 0;
+                }
+                if (j == input.length - 1 - i) {
+                    input[i][j] = 0;
+                }
+            }
+        }
+    }
 }

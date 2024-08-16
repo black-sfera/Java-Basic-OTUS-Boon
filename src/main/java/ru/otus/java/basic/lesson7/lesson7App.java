@@ -19,6 +19,14 @@ public class lesson7App {
         int result2 = findMax(array);
         System.out.println("Максимальный элемент массива " + result2);
 
+        int result3 = sumElement(array);
+        print2DArray(array);
+        System.out.println("Сумма второй строки " + result3);
+        int[][] arr4 = {};
+        int result4 = sumElement(arr4);
+        print2DArray(arr4);
+        System.out.println("Сумма второй строки " + result4);
+
     }
 
     public static int sumOfPositiveElements(int[][] input) {
@@ -61,9 +69,10 @@ public class lesson7App {
         }
         System.out.println();
     }
+
     public static void diagonalZeros(int[][] input) {
-        for (int i = 0; i < input.length; i++){
-            for (int j = 0; j < input[i].length; j++){
+        for (int i = 0; i < input.length; i++) {
+            for (int j = 0; j < input[i].length; j++) {
                 if (i == j) {
                     input[i][j] = 0;
                 }
@@ -73,15 +82,32 @@ public class lesson7App {
             }
         }
     }
+
     public static int findMax(int[][] array) {
         int maxElement = array[0][0];
         for (int i = 0; i < array.length; i++) {
-        for (int j = 0; j < array.length; j++) {
-            if (maxElement < array[i][j]) {
-                maxElement = array[i][j];
+            for (int j = 0; j < array.length; j++) {
+                if (maxElement < array[i][j]) {
+                    maxElement = array[i][j];
+                }
             }
         }
-        }
         return maxElement;
+    }
+
+    public static int sumElement(int[][] array) {
+        int sum = 0;
+        if (array.length <= 1) {
+            sum = -1;
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (i == 1) {
+                    sum += array[i][j];
+                }
+            }
+
+        }
+        return sum;
     }
 }

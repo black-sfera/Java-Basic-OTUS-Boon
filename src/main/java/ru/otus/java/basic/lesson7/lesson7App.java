@@ -8,7 +8,6 @@ public class lesson7App {
         int result = sumOfPositiveElements(array);
         System.out.println("Сумма элементов массива " + result);
 
-
         drawing(4);
         int[][] arr2 = new int[5][5];
         fill2DArray(arr2, 5);
@@ -16,6 +15,9 @@ public class lesson7App {
 
         diagonalZeros(arr2);
         print2DArray(arr2);
+
+        int result2 = findMax(array);
+        System.out.println("Максимальный элемент массива " + result2);
 
     }
 
@@ -70,5 +72,16 @@ public class lesson7App {
                 }
             }
         }
+    }
+    public static int findMax(int[][] array) {
+        int maxElement = array[0][0];
+        for (int i = 0; i < array.length; i++) {
+        for (int j = 0; j < array.length; j++) {
+            if (maxElement < array[i][j]) {
+                maxElement = array[i][j];
+            }
+        }
+        }
+        return maxElement;
     }
 }
